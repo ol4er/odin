@@ -6,12 +6,13 @@
   <body>
   <script>
   //Look a comment
+  // document.getElementById("demo").innerHTML //important thing to remember
     let oneThing;
     let toAnother;
     let anotherOne;
     let bitesTheDust;
     oneThing = 100;
-    toAnother = 44/2;
+    toAnother = 50*2;
     anotherOne = (Math.round((oneThing/toAnother)*34));
     bitesTheDust = 242;
     console.log("Sup my dude");
@@ -29,13 +30,21 @@ console.log(typeof oneThing);
   //indexOf - returns position of specified text in string.
   let pos = string.indexOf("dub"); //returns (4), which is the fifth position coz 01234
 let lastTime = string.replace("today", "tomorrow");
-  console.log(lastTime.toUpperCase()); //note that it needs the () at the nd. var.toUpperCase();
-
+  console.log(lastTime.toUpperCase());
+  console.log("Hello".concat(string,lastTime));//note that it needs the () at the nd. var.toUpperCase();
+//conditional incomingggg
+if (oneThing == toAnother){
+    console.log(strLength);
+} else {
+  console.log("Not equal");
+}
+//what fun
   </script>
-  <a href="https://javascript.info/types">Javascript types</a>
+  <a href="https://javascript.info/types">Javascript types</a><br>
+  <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String">Method list</a>
   <p>Check the console log</p>
   <ol>
-    <li>number</li>
+    <li><a href="exercise.html">number</a></li>
     <li>string</li>
     <li>boolean</li>
     <li>null</li>
