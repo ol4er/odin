@@ -40,6 +40,7 @@ if (oneThing == toAnother){
 }
 //what fun
 
+let whatMsg = document.getElementById("whatDay");
 
 //ok ok, this is the SWITCH thing, how cool is it Look
 const day = new Date().getDay();
@@ -64,7 +65,7 @@ switch (day) {
   console.log("Get lost it's the weekend");
   break;
   case 0:
-  console.log("Sunday. Go to church and stop masturbating.");
+  whatMsg = "Sunday. Go to church and stop masturbating.";
   break;
   default:
   console.log("Someone fked up. Try again?");
@@ -83,5 +84,6 @@ switch (day) {
     <li>object</li>
     <li>symbol</li>
   </ol>
+  <p id="whatDay"></p>
 </body>
 </html>
