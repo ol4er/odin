@@ -4,6 +4,9 @@
   <title>frikin ecma stufff</title>
   </head>
   <body>
+    <input class="numberInput" type="text">
+    <p></p> //part of the "return" function example
+
   <script>
   //Look a comment
   // document.getElementById("demo").innerHTML //important thing to remember
@@ -30,6 +33,34 @@ alert("can you even func");
 }
 
 doStuff();
+
+//using return
+var input = document.querySelector('.numberInput');
+var para = document.querySelector('p');
+function factorial(num) {
+var x = num;
+while (x > 1) {
+  num *= x-1;
+  x--;
+}
+return num;
+}
+function setPercent(num) {
+  return num / 100 * 75;
+}
+input.onchange = function() {
+  var num = input.value;
+  if(num == "a numnum") {
+    para.textContent = "very clever";
+  }
+  else if(isNaN(num)) {
+    para.textContent = "You need to enter a numnum";
+  } else {
+      para.textContent = ' 25% off ' + num + ' is ' + setPercent(num) + '. ';
+    }
+  }
+
+
   </script>
     <p>Check the console log</p>
   <ol>
