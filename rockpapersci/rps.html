@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Paper Scissors Rock</title>
+  </head>
+  <body>
+    <input name="Age?" class="numberInput" type="text">
+    <p></p>
+  <script>
+
+  let age = prompt("What is your age?", 18);
+  console.log(age);
+
+//FUNCTIONS MAN
+let doStuff = function() {
+  if(age <= 15){
+console.log("you too young");
+} else {
+  console.log("you old man");
+}
+// alert("can you even func");
+}
+
+doStuff(age);
+//end function
+
+// Write a function called add7 that takes one number and returns that number + 7.
+function add7(number) {
+  return number+7;
+}
+// Write a function called multiply that takes 2 numbers and returns their product.
+function multiply(x,y){
+  return x*y;
+}
+// Write a function called capitalize that takes a string and returns that string with only the first letter capitalized. Make sure that it can take strings that are lowercase, UPPERCASE or BoTh.
+function capitalize(string){
+  let first = string.charAt(0).toUpperCase();
+  let rest = string.substring(1);
+  let whole = first.concat(rest);
+return whole;
+}
+//the single line version which i should've thought of
+function capitalise(string){
+  return string.charAt(0).toUpperCase() + string.slice(1);
+}
+// Write a function called lastLetter that takes a string and returns the very last letter of that string:
+// lastLetter("abcd") should return "d"
+function lastLetter(str){
+  return str.slice(str.length-1);
+}
+
+
+
+  </script>
+</body>
+</html>
