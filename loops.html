@@ -7,25 +7,33 @@
   <p class="admitted"></p>
   <p class="refused"></p>
   <script>
-  var people = ['Chris', 'Anne', 'Colin', 'Terri', 'Phil', 'Lola', 'Sam', 'Kay', 'Bruce'];
 
-  var admitted = document.querySelector('.admitted');
-  var refused = document.querySelector('.refused');
-  admitted.textContent = 'Admit: ';
-  refused.textContent = 'Refuse: '
-
-  var i = 0;
-  while (i < people.length) {
-    if (people[i] === 'Phil' || people[i] === 'Lola') {
-      refused.textContent += people[i] + ", ";
-    } else {
-admitted.textContent += people[i] + ", ";
+for(let i = 0; i < 11; i++){
+  if(i%2 === 0){ // % "modulo" checks the remainder. If the remander is zero when divide by 2, it's even. obviously.
+    alert(i);
   }
+}
 
-    i++;
-  }
-  refused.textContent = refused.textContent.slice(0,refused.textContent.length-2) + ".";
-  admitted.textContent = admitted.textContent.slice(0,admitted.textContent.length-2) + ".";
+
+//   var people = ['Chris', 'Anne', 'Colin', 'Terri', 'Phil', 'Lola', 'Sam', 'Kay', 'Bruce'];
+//
+//   var admitted = document.querySelector('.admitted');
+//   var refused = document.querySelector('.refused');
+//   admitted.textContent = 'Admit: ';
+//   refused.textContent = 'Refuse: '
+//
+//   var i = 0;
+//   while (i < people.length) {
+//     if (people[i] === 'Phil' || people[i] === 'Lola') {
+//       refused.textContent += people[i] + ", ";
+//     } else {
+// admitted.textContent += people[i] + ", ";
+//   }
+//
+//     i++;
+//   }
+//   refused.textContent = refused.textContent.slice(0,refused.textContent.length-2) + ".";
+//   admitted.textContent = admitted.textContent.slice(0,admitted.textContent.length-2) + ".";
 
 
 
