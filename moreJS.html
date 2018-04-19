@@ -4,23 +4,35 @@
   <title>Learning arrays and stuff</title>
 </header>
 <body>
+  <p id="moitag"></p>
+
+  <!-- <label for="search">Search by contact name: </label>
+<input id="search" type="text">
+<button>Search</button>
+  <h3></h3> -->
+
   <script>
-  let name = [
-    "Barry",
-    "Peter",
-    "Susan",
-    "Larry",
-    "Candless",
-    "John",
-    17
+
+//   var para = document.querySelector('p');
+// var input = document.querySelector('input');
+// var btn = document.querySelector('button');
+//above uses do elements for search tag loop thing
+  let hArray = [
+    "Barry:0073475",
+    "Peter:12341",
+    "Susan:4444444",
+    "Larry:2133223",
+    "Candless:1",
+    "John:43"
   ];
-  console.log(name.length);
+  console.log(hArray.length);
   //for loop (declaration; if statemet; do this if true)
-  for(i = 0; i < 10; i++){
-    console.log(name[i])
-    name.push("Terry");
-    console.log(name.length);
-  }
+  // for(i = 0; i < 10; i++){
+  //   console.log(hArray[i])
+  //   hArray.push(Math.random(hArray[i]));
+  //   console.log(hArray.length);
+  // }
+
   //isArray? yes. It is.
   let push = "Me";
   if(Array.isArray(push)){
@@ -28,6 +40,47 @@
   } else {
     console.log("Not an array");
   }
+
+  function fmuFam(){
+//pop and push
+// hArray.pop(); //removes the last element of the array
+let poppedVal = hArray.pop();
+console.log(poppedVal); //sends the last element to it's own variable, removing it from the Array.
+
+let pushedVal = hArray.push("onemore");
+console.log(pushedVal); // outputs the new length after "Pushing" another element. We've deleted "John" and added "Onemore" so it's remains 6.
+//let shiftedVal = hArray.shift(); //same as pop but at the start
+hArray.unshift("unshift adds a whole new thing and shuffles everything forward"); //outputs number a la push. adding a value.
+
+hArray[Math.floor(Math.random()*8)] = "NEWNAME";
+hArray[hArray.length] = "Same as push";
+
+hArray.splice(2, 0, "Lemon", "Kiwi"); //(position to splice, elements to delete, elements to add...)
+//Slice from an element onwards, output to new array. Concat joins two existing arrays together, creating a new one.
+let newArray = hArray.slice(5);
+let concatArray = hArray.concat(newArray);
+
+// document.getElementById('moitag').innerHTML = hArray.toString(); //outputs toString.
+document.getElementById('moitag').innerHTML = concatArray.join(" **** "); //also outputs to string, but you get to declare the separator (" ") makes it wrap within webpage
+}
+for(i = 0; i < 10; i++){
+  fmuFam();
+}
+  // btn.addEventListener('click', function(){
+  //     let searchName = input.value;
+  //     input.value = '';
+  //     input.focus();
+  //     for(i = 0; i < contacts.length; i++){
+  //       let splitContact = contacts[i].split(':');
+  //       if(splitContact[0] === searchName){
+  //         para.textContent = splitContact[0] + '\'s number is ' + splitContact[1] + '.';
+  //         break;
+  //       } else {
+  //         para.textContent = "content not found";
+  //       }
+  //     }
+  // })
+
   </script>
 </body>
 </html>
